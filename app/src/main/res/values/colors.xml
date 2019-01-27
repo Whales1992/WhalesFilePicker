@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorSecondary">#4F6C8D</color>
+    <color name="shade">#7b000000</color>
+    <color name="colorPrimary">#00ADEF</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="grey">#4A4A4A</color>
+    <color name="gray">#565959</color>
+    <color name="arch">#a0a4a4</color>
+    <color name="chaticonstint">#9B9B9B</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="light_dim">#66686666</color>
+    <color name="green">#4AAD47</color>
+
+    <color name="bg_row_background">#fa315b</color>
+    <color name="colorLabel">#4A4A4A</color>
+
+
+    <color name="search_layout_fill">#f6f6f6</color>
+    <color name="tab_layout_fill">#f7f7f7</color>
+    <color name="tab_active_fill">#4267B2</color>
+    <color name="chat_text_color">#28233A</color>
+    <color name="search_text_hint_color">#868A9D</color>
+    <color name="search_text_color">#28233A</color>
+    <color name="divider">#C8CAD3</color>
+    <color name="line">#00D6AC</color>
+    <color name="arrow">#38E0C6</color>
+    <color name="solid4">#C8CAD3</color>
+    <color name="solid5">#F6F6F6</color>
+    <color name="toolbar_text_color">#484D63</color>
+    <color name="otpcolor">#484D63</color>
+    <color name="bleak">#28233A</color>
+    <color name="black_progress_trans_bg">#3d121111</color>
+    <color name="black_transparent">#57837f7f</color>
+    <color name="black_trans">#e2121111</color>
+    <color name="notifications">#0084FF</color>
+    <color name="money">#23A3AF</color>
+    <color name="settings">#484D63</color>
+    <color name="div_line">#F8F8F8</color>
+    <color name="swipe">#F8F9FB</color>
+    <color name="border">#F0F0F0</color>
+    <color name="red">#FF515C</color>
+    <color name="chat_background">#f8f9fb</color>
+
+    <color name="almost_tran">#95eeeef0</color>
+    <color name="almost_tran_">#a0e1e5e8</color>
+
+</resources>

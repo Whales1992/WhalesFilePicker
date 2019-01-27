@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/transparent"
+    android:translationZ="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_alignParentStart="true"
+                android:layout_width="50dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/back"
+                    android:backgroundTint="@color/colorSecondary" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/toolbartitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:maxLength="25"
+                android:paddingLeft="30dp"
+                android:paddingStart="30dp"
+                android:paddingRight="30dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/action_button"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textAllCaps="true"
+                    android:text="@string/create"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:textColor="@color/notifications"
+                    android:textSize="15sp"/>
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/menu_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/menu"
+                    android:backgroundTint="@color/colorSecondary" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+ </RelativeLayout>
