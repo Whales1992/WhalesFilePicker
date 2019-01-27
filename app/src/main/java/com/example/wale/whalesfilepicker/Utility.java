@@ -18,6 +18,8 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class Utility {
+    public static final int REQUEST_CODE = 000111;
+
     public static void initToolbarNew(String title, boolean with_right_menu, String right_menu_title, final Activity activity){
         TextView toolbarTitle = activity.findViewById(R.id.toolbartitle);
         RelativeLayout backbtn = activity.findViewById(R.id.backbtn);

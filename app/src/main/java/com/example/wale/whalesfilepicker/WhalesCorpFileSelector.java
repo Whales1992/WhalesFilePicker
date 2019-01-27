@@ -151,7 +151,7 @@ public class WhalesCorpFileSelector extends AppCompatActivity {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         try{
-            if (requestCode == 000111 && resultCode == RESULT_OK) {
+            if (requestCode == Utility.REQUEST_CODE && resultCode == RESULT_OK) {
                     Gson gson = new Gson();
                     Type type = new TypeToken<JSONArray>() {}.getType();
                     selected = gson.fromJson(data.getStringExtra("data"), type);
