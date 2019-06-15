@@ -3,6 +3,7 @@ package com.example.wale.whalesfilepicker;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
@@ -19,6 +20,13 @@ import java.util.TreeSet;
 
 public class Utility {
     public static final int REQUEST_CODE = 000111;
+
+    public static void NAVIGATE(Activity activity, String type, String title){
+        Intent intent = new Intent(activity, WhalesCorpFileSelector.class);
+        intent.putExtra("type", type);
+        intent.putExtra("title", title);
+        activity.startActivity(intent);
+    }
 
     public static void initToolbarNew(String title, boolean with_right_menu, String right_menu_title, final Activity activity){
         TextView toolbarTitle = activity.findViewById(R.id.toolbartitle);

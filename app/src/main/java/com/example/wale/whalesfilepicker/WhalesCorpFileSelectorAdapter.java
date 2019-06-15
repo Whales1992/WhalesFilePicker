@@ -92,7 +92,7 @@ public class WhalesCorpFileSelectorAdapter extends RecyclerView.Adapter<WhalesCo
                     intent.putExtra("data", data);
                     intent.putExtra("type", file_type);
                     intent.putExtra("folder", holder.folder_title.getText().toString());
-                    activity.startActivityForResult(intent, 000111);
+                    activity.startActivityForResult(intent, Utility.REQUEST_CODE);
                 }
             });
         } catch (Exception e) {

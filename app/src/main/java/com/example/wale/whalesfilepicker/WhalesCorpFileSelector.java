@@ -1,11 +1,17 @@
 package com.example.wale.whalesfilepicker;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.PermissionChecker;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -32,15 +38,21 @@ public class WhalesCorpFileSelector extends AppCompatActivity {
     private String folder_title = "";
     private int count = 0;
 
+    private static final int REQUEST_PERMISSION_STORAGE= 111;
+
     private String file_type ="";
 
     private JSONArray selected;
+
+    public static final String img = "image";
+    public static final String vid = "video";
+    public static final String aud = "audio";
+    public static final String doc = "document";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whalescorpfileselector);
-
         recyclerView = findViewById(R.id.recyclerView);
 
         try{
@@ -60,19 +72,19 @@ public class WhalesCorpFileSelector extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         switch (file_type){
-            case "image":
+            case img:
                 filesPaths.addAll(Utility.getImagesPath(this));
                 break;
 
-            case "video":
+            case vid:
                 filesPaths.addAll(Utility.getVideosPath(this));
                 break;
 
-            case "audio":
+            case aud:
                 filesPaths.addAll(Utility.getAudiosPath(this));
                 break;
 
-            case "document":
+            case doc:
                 Utility uti = new Utility();
                 filesPaths.addAll(uti.getDocumentsPath());
                 break;
@@ -157,7 +169,7 @@ public class WhalesCorpFileSelector extends AppCompatActivity {
                     selected = gson.fromJson(data.getStringExtra("data"), type);
                     file_type = data.getStringExtra("type");
 
-                    setResult(RESULT_OK, data);
+                    setResult(Utility.REQUEST_CODE, data);
                     finish();
             }
         }catch (Exception ex){

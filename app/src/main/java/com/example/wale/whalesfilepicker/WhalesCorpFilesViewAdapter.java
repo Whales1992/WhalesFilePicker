@@ -46,7 +46,6 @@ public class WhalesCorpFilesViewAdapter extends RecyclerView.Adapter<WhalesCorpF
 
         this.data = data;
         this.file_type = file_type;
-
     }
 
     @Override
